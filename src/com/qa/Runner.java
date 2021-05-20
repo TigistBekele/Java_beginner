@@ -2,6 +2,9 @@ package com.qa;
 
 import java.util.ArrayList;
 
+import com.qa.abstraction.Bike;
+import com.qa.abstraction.Car;
+import com.qa.abstraction.Motercycle;
 import com.qa.array.Array;
 import com.qa.arraylist.ArraylistExa;
 import com.qa.classconstructors.Book;
@@ -111,6 +114,54 @@ public class Runner {
 
 		Person.speak(false);
 
-	}
+		
+		
+//		*************inheritance**************
+//		
+//		Person jone = new Person("jone", "MN", 23, "new");
+//	
+//	    Person james = new Person("james","ST" , 35, "old");
+		
+//	System.out.println("this is my" + Person.getEmployee());
+		
+		
+//	*********abstraction"********************
+	Car lemo  = new Car("Toyota", 1000, "Gray", 4);
+	
+	System.out.println(lemo.getBrand());
+	System.out.println(lemo.getColor());
+	System.out.println(lemo.getWheel());
 
+	lemo.fast();
+	lemo.ride();
+	lemo.stop();
+		
+	
+	
+	
+	Motercycle motoNice = new Motercycle("new", 35, "Black","metal");
+	
+	System.out.println(motoNice.getBrand());
+	System.out.println(motoNice.getColor());
+	System.out.println(motoNice.getMadeOf());
+
+	motoNice.fast();
+	motoNice.ride();
+	motoNice.stop();
+
+	
+	Bike oldBike = new Bike("old", 299,"red", 4);
+	
+	System.out.println(oldBike.getBrand());
+	System.out.println(oldBike.getColor());
+	System.out.println(oldBike.getWorkyr());
+	
+	
+	oldBike.fast();
+	oldBike.stop();
+	oldBike.ride();
+	}
+	
+
+	
 }
