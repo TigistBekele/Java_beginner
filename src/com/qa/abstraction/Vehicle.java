@@ -3,17 +3,32 @@ package com.qa.abstraction;
 public abstract class Vehicle {
 
 //	Attribute
+	protected int id;
+	protected String brand;
+	protected int mileAge;
+	protected String color;
+	protected int year;
 	
-	private String brand;
-	private int mileAge;
-	private String color;
 	
-	
-	public Vehicle(String brand, int mileAge, String color) {
+	public Vehicle(int id, String brand, int mileAge, String color, int year) {
 		super();
+		this.id = id;
 		this.brand = brand;
 		this.mileAge = mileAge;
 		this.color = color;
+		this.year = year;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getBrand() {
 		return brand;

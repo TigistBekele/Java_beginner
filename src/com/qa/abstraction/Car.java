@@ -4,10 +4,11 @@ public class Car extends Vehicle {
 	
 	private int wheel;
 	
-	public Car(String brand, int mileAge, String color, int wheel) {
-		super(brand, mileAge, color);
-	}
 
+	public Car(int id, String brand, int mileAge, String color, int year,int wheel) {
+		super(id, brand, mileAge, color, year);
+		// TODO Auto-generated constructor stub
+	}
 
 	public int getWheel() {
 		return wheel;
@@ -16,8 +17,6 @@ public class Car extends Vehicle {
 	public void setWheel(int wheel) {
 		this.wheel = wheel;
 	}
-
-
 
 	@Override
 	public void left() {
@@ -35,4 +34,22 @@ public class Car extends Vehicle {
 
 	}
 
-}
+	@Override
+	  public String toString() {
+	    return (
+	      "Model: " +
+	      this.brand +
+	      "\n" +
+	      "Year: " +
+	      this.year +
+	      "\n" +
+	      "Color: " +
+	      this.color+
+	      "\n" +
+	      " wheel number: " +
+	      this.wheel +
+	      "\n"
+	    );
+	  }
+	}
+

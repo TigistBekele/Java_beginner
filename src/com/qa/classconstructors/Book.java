@@ -18,7 +18,16 @@ public class Book {
 		this.edition = edition;
 
 	}
+//	Method Overloading - Constructor overloading
+	public Book(String title,String author,int edition,boolean isInteresting) {
 
+		this.title = title;
+		this.author = author;
+		this.edition = edition;
+		this.isInteresting = isInteresting;
+		
+	}	
+		
 //   Method
 	public void buy() {
 		System.out.println(this.title + " this book is written by ");

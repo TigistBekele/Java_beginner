@@ -1,21 +1,28 @@
 package com.qa;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.qa.abstraction.Bike;
 import com.qa.abstraction.Car;
+import com.qa.abstraction.Garage;
 import com.qa.abstraction.Motercycle;
+import com.qa.abstraction.Vehicle;
 import com.qa.array.Array;
 import com.qa.arraylist.ArraylistExa;
 import com.qa.classconstructors.Book;
-import com.qa.classconstructors.Person;
+import com.qa.classconstructors.Persons;
 import com.qa.conditionals.BlackJack;
 import com.qa.conditionals.Fizzbuzz;
 import com.qa.conditionals.Flowcharts;
 import com.qa.conditionals.Result;
 import com.qa.conditionals.Taxes;
 import com.qa.conditionals.Uniquesum;
+import com.qa.encapsulation.Cat;
 import com.qa.helloworld.HelloWorld;
+import com.qa.inheritance.Employee;
+import com.qa.inheritance.Person;
+import com.qa.inheritance.Trainee;
 import com.qa.iteration.Iterations;
 import com.qa.operators.Calculator;
 import com.qa.stringmanipulation.Stringmanipulation;
@@ -92,75 +99,146 @@ public class Runner {
 //		********FizzBuzz**********
 
 		Fizzbuzz.fizzbuzz(100);
+		
+//		************encapsulation**************
+		
+//		Cat newCat = new Cat("pop", 2, "black and white");
+//		
+//		System.out.println(Cat.getNameOfCat("pop"));
 
 //		*****************************BOOK*******************************
 
 		Book jone = new Book("What Insects Do", "Jone", 5);
-		Book bookVar = new Book("flower", "James", 6);
+		Book bookVar = new Book("flower", "James", 6, true);
 		System.out.println(jone.title);
 		System.out.println(jone.author);
 		System.out.println(jone.edition);
 		System.out.println(jone.reading("read this book"));
 
-		System.out.println(bookVar.title);
+		System.out.println(bookVar.isInteresting);
 
 //     ****************Person**********************
 
-		Person tg = new Person("Tigist", "Eth", 30, "Female");
+		Persons tg = new Persons("Tigist", "Eth", 30, "Female");
 
 		System.out.println(tg.name);
 		System.out.println(tg.gender);
 		System.out.println(tg.Age);
 
-		Person.speak(false);
-
+		Persons.speak(false);
+		Persons.speak(true);
 		
 		
 //		*************inheritance**************
-//		
-//		Person jone = new Person("jone", "MN", 23, "new");
+		
+//		Person examplePerson = new Person("Tigist", 25 , "st.paul", true, "brown");
 //	
-//	    Person james = new Person("james","ST" , 35, "old");
+//		examplePerson.livingPlace();
+//		examplePerson.eye();
+//		
+//	    Employee exampleEmployee1 = new Employee("Hanna", 23 ,51000.23);
+//	    Employee exampleEmployee2 = new Employee("Beza", 26 ,53000.21);
+//	    Employee exampleEmployee3 = new Employee("Tsion", 29 ,58000.25);
+//		
+//	    System.out.println(exampleEmployee1.calculateWeeklySalary());
+//	    System.out.println(exampleEmployee2.calculateWeeklySalary());
+//	    System.out.println(exampleEmployee3.calculateWeeklySalary());
+//	    
+//	    System.out.println(exampleEmployee1.getName());
+//	    System.out.println(exampleEmployee2.getName());
+//	    System.out.println(exampleEmployee3.getName());
+//		exampleEmployee1.speak();
+//		
+//		System.out.println("The name of person is : " + examplePerson.getName());
+//		System.out.println("The name of person is : " + exampleEmployee1.getName());
+//		
+//		Trainee exampleTrainee = new Trainee("Bob", 24, "Stpaul");
+//		
+//		
+//		exampleTrainee.addSubject("Music");
+//		exampleTrainee.addSubject("Maths");
+//		exampleTrainee.addSubject("Engilish");
+//		
+//		System.out.println(exampleTrainee.getSubjectslearned());
+//		
+//		
 		
 //	System.out.println("this is my" + Person.getEmployee());
 		
+//*************Garage************		
 		
+		Car BW = new Car(23, "bw",10000, "Black", 4, 2010);
+	    Motercycle running = new Motercycle (24,"bobo", 2000, "gray", 2018);
+	    Bike lili = new Bike(25,"rrr",2344, "white", 2000, true);
+	    List<Vehicle> downtown = new ArrayList<Vehicle>();
+	    Garage location = new Garage(downtown);
+	    
+	    //adds two vehicals
+	    location.addVehcle(BW);
+	    location.addVehcle(running);
+	    //calculate bill
+	    double bill = location.calcBill();
+	    System.out.println("Bill is: "+ bill + "$");
+	    //print what we have in the garage
+	    location.printList();
+	    //remove by object.
+	    location.removeByID(2);
+	    location.printList();
+
+	    // remove by id.
+	    location.removeByID(2);
+	    location.printList();
+	    //add the truck and then remove all.
+	    location.addVehcle(lili);
+	    location.printList();
+	    location.removeAll();
+	    location.printList();
+
+	    //remove by type
+	    location.addVehcle(lili);
+	    location.printList();
+	    location.removeByType("Truck");
+	    location.printList();
+
 //	*********abstraction"********************
-	Car lemo  = new Car("Toyota", 1000, "Gray", 4);
-	
-	System.out.println(lemo.getBrand());
-	System.out.println(lemo.getColor());
-	System.out.println(lemo.getWheel());
-
-	lemo.fast();
-	lemo.ride();
-	lemo.stop();
-		
-	
-	
-	
-	Motercycle motoNice = new Motercycle("new", 35, "Black","metal");
-	
-	System.out.println(motoNice.getBrand());
-	System.out.println(motoNice.getColor());
-	System.out.println(motoNice.getMadeOf());
-
-	motoNice.fast();
-	motoNice.ride();
-	motoNice.stop();
-
-	
-	Bike oldBike = new Bike("old", 299,"red", 4);
-	
-	System.out.println(oldBike.getBrand());
-	System.out.println(oldBike.getColor());
-	System.out.println(oldBike.getWorkyr());
-	
-	
-	oldBike.fast();
-	oldBike.stop();
-	oldBike.ride();
+//	Car lemo  = new Car(0, "Toyota", 1000, "Gray", 4, 0);
+//	
+//	System.out.println(lemo.getBrand());
+//	System.out.println(lemo.getColor());
+//	System.out.println(lemo.getWheel());
+//
+//	lemo.fast();
+//	lemo.ride();
+//	lemo.stop();
+//		
+//	
+//	
+//	
+//	Motercycle motoNice = new Motercycle("new", 35, "Black","metal");
+//	
+//	System.out.println(motoNice.getBrand());
+//	System.out.println(motoNice.getColor());
+//	System.out.println(motoNice.getMadeOf());
+//
+//	motoNice.fast();
+//	motoNice.ride();
+//	motoNice.stop();
+//
+//	
+//	Bike oldBike = new Bike("old", 299,"red", 4);
+//	
+//	System.out.println(oldBike.getBrand());
+//	System.out.println(oldBike.getColor());
+//	System.out.println(oldBike.getWorkyr());
+//	
+//	
+//	oldBike.fast();
+//	oldBike.stop();
+//	oldBike.ride();
+//	
 	}
+
+
 	
 
 	

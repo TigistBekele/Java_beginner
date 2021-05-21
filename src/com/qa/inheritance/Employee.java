@@ -2,34 +2,30 @@ package com.qa.inheritance;
 
 public class Employee extends Person {
 
-private static Object name;
-	//	Attribute
-	protected double annualSalary;
-	protected double weeklySalary;
-	
-	
+	// Attribute
+	private double annualSalary;
+	private double weeklySalary;
+
+//	Method overriding
+	public void speak() {
+		System.out.println("yup");
+	}
+
 //	Constructor
+
+	public Employee(String name,int age,double annualSalary) {
+		super(name,age);
+		this.annualSalary = annualSalary;
+		
+	}
+		
 	
-
-	public Employee(String name, int age, String city, boolean likesMovie, String eyeColor, double annualSalary,
-		double weeklySalary) {
-	super(name, age, city, likesMovie, eyeColor);
-	this.annualSalary = annualSalary;
-	this.weeklySalary = weeklySalary;
-}
-
-	public double calculateWeeklySalary(double annualSalary,double weeklySalary) {
-		return annualSalary / 52 ;
+public double calculateWeeklySalary() {
+		return weeklySalary = annualSalary / 52.0;
 	}
 
-	public static Object getName() {
-		return name;
-	}
-
-	public static void setName(Object name) {
-		Employee.name = name;
-	}
-
+//	GET / SET
+	
 	public double getAnnualSalary() {
 		return annualSalary;
 	}
@@ -45,5 +41,7 @@ private static Object name;
 	public void setWeeklySalary(double weeklySalary) {
 		this.weeklySalary = weeklySalary;
 	}
-	
+
+
+
 }

@@ -2,11 +2,14 @@ package com.qa.abstraction;
 
 public class Bike extends Vehicle {
 
-	private int workyr; 
+	private int workyr;
+	private boolean run; 
 	
-	public Bike(String brand, int mileAge, String color, int workyr) {
-		super(brand, mileAge, color);
-		
+	
+
+	public Bike(int id, String brand, int mileAge, String color, int year,boolean run) {
+		super(id, brand, mileAge, color, year);
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getWorkyr() {
@@ -34,5 +37,23 @@ public class Bike extends Vehicle {
 		System.out.println("this is STOP sign");
 
 	}
+	@Override
+	  public String toString() {
+	    return (
+	      "Model: " +
+	      this.brand +
+	      "\n" +
+	      "Year: " +
+	      this.year +
+	      "\n" +
+	      "Color: " +
+	      this.color +
+	      "\n" +
+	      "Can it run?: " +
+	      this.run +
+	      "\n"
+	    );
+	  }
+	}
 
-}
+
