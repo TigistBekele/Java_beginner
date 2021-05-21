@@ -1,31 +1,38 @@
 package com.qa.inheritance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Trainee extends Person {
 	
 	//	Attribute
-	protected double bursary;
-	protected String subjectsLearned;
+//	private double bursary;
+//	private String subjectsLearned;
+//	
 	
+	private List <String> subjectslearned = new ArrayList<String>();
 	
 //	Constructor
 	
-	public Trainee() {
-		super();
-		this.bursary = bursary;
-		this.subjectsLearned = subjectsLearned;
+	public Trainee(String name,int age, String city) {
+		super(name, age, city);
+//		this.subjectsLearned = subjectsLearned;
 		
 	}
-	
-	public Trainee(double bursary,String subjectsLearned) {
-		super(name);
-		this.bursary = 100.99;
-		this.subjectsLearned = "Maths";
+
+	public List<String> getSubjectslearned() {
+		return subjectslearned;
 	}
-	
-	
-	public String addSubject() {
-		return "added new subject" + subjectsLearned;
+
+	public void setSubjectslearned(List<String> subjectslearned) {
+		this.subjectslearned = subjectslearned;
 	}
+			
+
+	public void addSubject(String sublen) {
+		System.out.println(subjectslearned.add(sublen));
+	}
+
 	
 	
 }

@@ -2,19 +2,20 @@ package com.qa.abstraction;
 
 public class Motercycle extends Vehicle {
 
-	private String madeOf;
+	private String type;
 	
-	public Motercycle(String brand, int mileAge, String color,String madeOf) {
-		super(brand, mileAge, color);
+
+	public Motercycle(int id, String brand, int mileAge, String color, int year) {
+		super(id, brand, mileAge, color, year);
 		// TODO Auto-generated constructor stub
 	}
 
 	public String getMadeOf() {
-		return madeOf;
+		return type;
 	}
 
 	public void setMadeOf(String madeOf) {
-		this.madeOf = madeOf;
+		this.type = madeOf;
 	}
 
 	@Override
@@ -34,5 +35,24 @@ public class Motercycle extends Vehicle {
 		System.out.println("stop moter");
 
 	}
-
+	@Override
+    public String toString() {
+      return (
+        "Model: " +
+        this.brand +
+        "\n" +
+        "Year: " +
+        this.year +
+        "\n" +
+        "Type: " +
+        this.type +
+        "\n" +
+        "color: " +
+        this.color +
+        "\n"
+      );
+    }
+    
 }
+
+

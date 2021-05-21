@@ -1,6 +1,6 @@
 package com.qa.classconstructors;
 
-public class Person {
+public class Persons {
 
 //	Atributes
 	    public String name;
@@ -9,7 +9,7 @@ public class Person {
 	    public String ethnicity;
 	    public String gender;
 // Constructor
-	    public Person(String name, String birthplace, int Age, String gender) {
+	    public Persons(String name, String birthplace, int Age, String gender) {
 	        this.name = name;
 	        this.birthplace = birthplace;
 	        this.Age = Age;
@@ -26,10 +26,11 @@ public class Person {
 	    	System.out.println(this.name + "is born in :" + this.birthplace);
 	    }
 	    
+//	   Method- overloading
 	    public static void speak(boolean isHappy) {
 	    	
 	    	if(isHappy) {
-	    	System.out.println( "is born in :");
+	    	System.out.println( "yessss I am happy");
 	    	}
 	    	else {
 	    		System.out.println("I am sad");
