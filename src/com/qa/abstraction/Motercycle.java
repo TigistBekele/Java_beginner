@@ -2,7 +2,7 @@ package com.qa.abstraction;
 
 public class Motercycle extends Vehicle {
 
-	private String type;
+	private int mileAge;
 	
 
 	public Motercycle(int id, String brand, int mileAge, String color, int year) {
@@ -10,13 +10,19 @@ public class Motercycle extends Vehicle {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getMadeOf() {
-		return type;
+
+
+	public int getMileAge() {
+		return mileAge;
 	}
 
-	public void setMadeOf(String madeOf) {
-		this.type = madeOf;
+
+
+	public void setMileAge(int mileAge) {
+		this.mileAge = mileAge;
 	}
+
+
 
 	@Override
 	public void left() {
@@ -38,16 +44,16 @@ public class Motercycle extends Vehicle {
 	@Override
     public String toString() {
       return (
-        "Model: " +
+        "Tne Brand of Motercycle: " +
         this.brand +
         "\n" +
-        "Year: " +
+        "Year of Manufacture: " +
         this.year +
         "\n" +
-        "Type: " +
-        this.type +
+        "MileAge is: " +
+        this.mileAge +
         "\n" +
-        "color: " +
+        "The color Motercycle is: " +
         this.color +
         "\n"
       );
