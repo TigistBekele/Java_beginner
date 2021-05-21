@@ -4,67 +4,67 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garage {
-	protected List<Vehicle> gar_List;
+	protected List<Vehicle> garageList;
 	
-	public Garage(List<Vehicle> gar_List) {
-	    this.gar_List = gar_List;
+	public Garage(List<Vehicle> garageList) {
+	    this.garageList = garageList;
 	  }
 	
-	public void addVehcle(Vehicle rav) {
-	    this.gar_List.add(rav);
+	public void addVehcle(Vehicle used) {
+	    this.garageList.add(used);
 	  }
 
 	  public void removeVehcle(Vehicle rav) {
-	    this.gar_List.remove(rav);
+	    this.garageList.remove(rav);
 	  }
 	
 	  public double calcBill() {
-		    //get Vehicle types.
+		    // To get Vehicle types.
 		    double bill = 0.00;
-		    for (int i = 0; i < this.gar_List.size(); i++) {
-		      if (this.gar_List.get(i) instanceof Car) {
-		        bill = bill + 12.57;
+		    for (int i = 0; i < this.garageList.size(); i++) {
+		      if (this.garageList.get(i) instanceof Car) {
+		        bill = bill + 15.45;
 		      } else {
-		        bill = bill + 5;
+		        bill = bill + 10;
 		      }
 		    }
 		    return bill;
 		  }
-	  public void removeByID(int Search) {
-		    if (!this.gar_List.isEmpty()) {
+	  public void removeByID(int findById) {
+		    if (!this.garageList.isEmpty()) {
 		      int index = 0;
-		      for (int i = 0; i < this.gar_List.size(); i++) {
-		        if (this.gar_List.get(i).id == Search) {
+		      for (int i = 0; i < this.garageList.size(); i++) {
+		        if (this.garageList.get(i).id == findById) {
 		          index = i;
 		        }
 		      }
-		      this.gar_List.remove(index);
+		      this.garageList.remove(index);
 		    } else {
 		      System.out.println("The garage is empty");
 		    }
 		  } 
 	  
 	  public void removeByType(String givenType) {
-		    if (!this.gar_List.isEmpty()) {
+		    if (!this.garageList.isEmpty()) {
 		      List<Vehicle> indexesToRemove = new ArrayList<Vehicle>();
-		      for (int i = 0; i < this.gar_List.size(); i++) {
-		    	  Vehicle e = this.gar_List.get(i);
-		        if (givenType == "car") {
-		          if (e instanceof Car) {
-		            indexesToRemove.add(e);
+		      for (int i = 0; i < this.garageList.size(); i++) {
+		    	  Vehicle XX = this.garageList.get(i);
+		        if (givenType == "Car") {
+		          if (XX instanceof Car) {
+		            indexesToRemove.add(XX);
 		          }
 		        }
 		        
-		        if (givenType == "motecycle") {
-		          if (e instanceof Motercycle) {
-		            indexesToRemove.add(e);
+		        if (givenType == "Motecycle") {
+		          if (XX instanceof Motercycle) {
+		            indexesToRemove.add(XX);
 		          }
 		        }
 		        //remove by types.
 		        
 		        indexesToRemove.forEach(index -> {
 		          System.out.println(index);
-		          this.gar_List.remove(index);
+		          this.garageList.remove(index);
 		        });
 		      }
 		    } else {
@@ -73,19 +73,19 @@ public class Garage {
 		  }
 
 		  public void removeAll() {
-		    if (!this.gar_List.isEmpty()) {
-		      this.gar_List.clear();
+		    if (!this.garageList.isEmpty()) {
+		      this.garageList.clear();
 		    } else {
-		      System.out.println("no cars");
+		      System.out.println("There is no cars");
 		    }
 		  }
 
 		  public void printList() {
-		    if (!this.gar_List.isEmpty()) {
+		    if (!this.garageList.isEmpty()) {
 		      System.out.println("");
-		      System.out.println(this.gar_List.iterator().next().toString());
+		      System.out.println(this.garageList.iterator().next().toString());
 		    } else {
-		      System.out.println("no cars");
+		      System.out.println("There is no cars");
 		    }
 		  }
 		}

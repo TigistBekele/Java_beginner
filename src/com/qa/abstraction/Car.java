@@ -7,7 +7,7 @@ public class Car extends Vehicle {
 
 	public Car(int id, String brand, int mileAge, String color, int year,int wheel) {
 		super(id, brand, mileAge, color, year);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public int getWheel() {
@@ -37,17 +37,17 @@ public class Car extends Vehicle {
 	@Override
 	  public String toString() {
 	    return (
-	      "Model: " +
+	      "The Brand of Car is: " +
 	      this.brand +
 	      "\n" +
-	      "Year: " +
+	      "Year of Manufacture: " +
 	      this.year +
 	      "\n" +
-	      "Color: " +
+	      "Color Of Car: " +
 	      this.color+
 	      "\n" +
-	      " wheel number: " +
-	      this.wheel +
+	      "The mileAge of the Car is: " +
+	      this.mileAge +
 	      "\n"
 	    );
 	  }

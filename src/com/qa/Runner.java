@@ -130,112 +130,115 @@ public class Runner {
 		
 		
 //		*************inheritance**************
+//		
+		Person examplePerson = new Person("Tigist", 25 , "st.paul", true, "brown");
+	
+		examplePerson.livingPlace();
+		examplePerson.eye();
 		
-//		Person examplePerson = new Person("Tigist", 25 , "st.paul", true, "brown");
-//	
-//		examplePerson.livingPlace();
-//		examplePerson.eye();
-//		
-//	    Employee exampleEmployee1 = new Employee("Hanna", 23 ,51000.23);
-//	    Employee exampleEmployee2 = new Employee("Beza", 26 ,53000.21);
-//	    Employee exampleEmployee3 = new Employee("Tsion", 29 ,58000.25);
-//		
-//	    System.out.println(exampleEmployee1.calculateWeeklySalary());
-//	    System.out.println(exampleEmployee2.calculateWeeklySalary());
-//	    System.out.println(exampleEmployee3.calculateWeeklySalary());
-//	    
-//	    System.out.println(exampleEmployee1.getName());
-//	    System.out.println(exampleEmployee2.getName());
-//	    System.out.println(exampleEmployee3.getName());
-//		exampleEmployee1.speak();
-//		
-//		System.out.println("The name of person is : " + examplePerson.getName());
-//		System.out.println("The name of person is : " + exampleEmployee1.getName());
-//		
-//		Trainee exampleTrainee = new Trainee("Bob", 24, "Stpaul");
-//		
-//		
-//		exampleTrainee.addSubject("Music");
-//		exampleTrainee.addSubject("Maths");
-//		exampleTrainee.addSubject("Engilish");
-//		
-//		System.out.println(exampleTrainee.getSubjectslearned());
-//		
-//		
+	    Employee exampleEmployee1 = new Employee("Hanna", 23 ,51000.23);
+	    Employee exampleEmployee2 = new Employee("Beza", 26 ,53000.21);
+	    Employee exampleEmployee3 = new Employee("Tsion", 29 ,58000.25);
+		
+	    System.out.println(exampleEmployee1.calculateWeeklySalary());
+	    System.out.println(exampleEmployee2.calculateWeeklySalary());
+	    System.out.println(exampleEmployee3.calculateWeeklySalary());
+	    
+	    System.out.println(exampleEmployee1.getName());
+	    System.out.println(exampleEmployee2.getName());
+	    System.out.println(exampleEmployee3.getName());
+		exampleEmployee1.speak();
+		
+		System.out.println("The name of person is : " + examplePerson.getName());
+		System.out.println("The name of person is : " + exampleEmployee1.getName());
+		
+		Trainee exampleTrainee = new Trainee("Bob", 24, "Stpaul");
+		
+		
+		exampleTrainee.addSubject("Music");
+		exampleTrainee.addSubject("Maths");
+		exampleTrainee.addSubject("Engilish");
+		
+		System.out.println(exampleTrainee.getSubjectslearned());
+		
+		
 		
 //	System.out.println("this is my" + Person.getEmployee());
 		
 //*************Garage************		
 		
-		Car BW = new Car(23, "bw",10000, "Black", 4, 2010);
-	    Motercycle running = new Motercycle (24,"bobo", 2000, "gray", 2018);
-	    Bike lili = new Bike(25,"rrr",2344, "white", 2000, true);
+		Car BW = new Car(23,"BMW", 10000, "Red", 2010, 4);
+	    Motercycle running = new Motercycle (24, "BOBO", 0, "Gray", 2018);
+	    Bike lili = new Bike(25,"GOGO",2344, "white", 2000, true);
 	    List<Vehicle> downtown = new ArrayList<Vehicle>();
-	    Garage location = new Garage(downtown);
+	    Garage GarageXX = new Garage(downtown);
 	    
 	    //adds two vehicals
-	    location.addVehcle(BW);
-	    location.addVehcle(running);
-	    //calculate bill
-	    double bill = location.calcBill();
-	    System.out.println("Bill is: "+ bill + "$");
+	    GarageXX.addVehcle(BW);
+	    GarageXX.addVehcle(lili);
+	    
+	    //calculate The bill
+	    
+	    double bill = GarageXX.calcBill();
+	    System.out.println("The Bill is: " + "$" + bill);
 	    //print what we have in the garage
-	    location.printList();
+	    GarageXX.printList();
 	    //remove by object.
-	    location.removeByID(2);
-	    location.printList();
+	    GarageXX.removeByID(2);
+	    GarageXX.printList();
 
-	    // remove by id.
-	    location.removeByID(2);
-	    location.printList();
-	    //add the truck and then remove all.
-	    location.addVehcle(lili);
-	    location.printList();
-	    location.removeAll();
-	    location.printList();
+	    // To remove by Id.
+	    GarageXX.removeByID(2);
+	    GarageXX.printList();
+	    
+	    //add the Bike and then remove all.
+	    GarageXX.addVehcle(running);
+	    GarageXX.printList();
+	    GarageXX.removeAll();
+	    GarageXX.printList();
 
 	    //remove by type
-	    location.addVehcle(lili);
-	    location.printList();
-	    location.removeByType("Truck");
-	    location.printList();
+	    GarageXX.addVehcle(running);
+	    GarageXX.printList();
+	    GarageXX.removeByType("Motercycle");
+	    GarageXX.printList();
 
 //	*********abstraction"********************
-//	Car lemo  = new Car(0, "Toyota", 1000, "Gray", 4, 0);
-//	
-//	System.out.println(lemo.getBrand());
-//	System.out.println(lemo.getColor());
-//	System.out.println(lemo.getWheel());
-//
-//	lemo.fast();
-//	lemo.ride();
-//	lemo.stop();
-//		
-//	
-//	
-//	
-//	Motercycle motoNice = new Motercycle("new", 35, "Black","metal");
-//	
-//	System.out.println(motoNice.getBrand());
-//	System.out.println(motoNice.getColor());
-//	System.out.println(motoNice.getMadeOf());
-//
-//	motoNice.fast();
-//	motoNice.ride();
-//	motoNice.stop();
-//
-//	
-//	Bike oldBike = new Bike("old", 299,"red", 4);
-//	
-//	System.out.println(oldBike.getBrand());
-//	System.out.println(oldBike.getColor());
-//	System.out.println(oldBike.getWorkyr());
-//	
-//	
-//	oldBike.fast();
-//	oldBike.stop();
-//	oldBike.ride();
-//	
+	Car lemo  = new Car(0, "Toyota", 1000, "Gray", 4, 0);
+	
+	System.out.println(lemo.getBrand());
+	System.out.println(lemo.getColor());
+	System.out.println(lemo.getWheel());
+
+	lemo.fast();
+	lemo.ride();
+	lemo.stop();
+		
+	
+	
+	
+	Motercycle motoNice = new Motercycle(33,"new",0, "Black", 2020);
+	
+	System.out.println(motoNice.getBrand());
+	System.out.println(motoNice.getColor());
+
+
+	motoNice.fast();
+	motoNice.ride();
+	motoNice.stop();
+
+	
+	Bike oldBike = new Bike(23,"HOHO", 299,"red", 2012,false);
+	
+	System.out.println(oldBike.getBrand());
+	System.out.println(oldBike.getColor());
+	System.out.println(oldBike.getWorkyr());
+	
+	
+	oldBike.fast();
+	oldBike.stop();
+	oldBike.ride();
+	
 	}
 
 

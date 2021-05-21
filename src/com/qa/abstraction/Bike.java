@@ -3,11 +3,11 @@ package com.qa.abstraction;
 public class Bike extends Vehicle {
 
 	private int workyr;
-	private boolean run; 
+	private boolean repaired; 
 	
 	
 
-	public Bike(int id, String brand, int mileAge, String color, int year,boolean run) {
+	public Bike(int id, String brand, int mileAge, String color, int year,boolean repaired) {
 		super(id, brand, mileAge, color, year);
 		// TODO Auto-generated constructor stub
 	}
@@ -40,17 +40,17 @@ public class Bike extends Vehicle {
 	@Override
 	  public String toString() {
 	    return (
-	      "Model: " +
+	      "The Brand of Bike is: " +
 	      this.brand +
 	      "\n" +
-	      "Year: " +
+	      "Year of Manufactrer: " +
 	      this.year +
 	      "\n" +
-	      "Color: " +
+	      "The Color of Bike is: " +
 	      this.color +
 	      "\n" +
-	      "Can it run?: " +
-	      this.run +
+	      "Is the Bike repaired ? " +
+	      this.repaired +
 	      "\n"
 	    );
 	  }
