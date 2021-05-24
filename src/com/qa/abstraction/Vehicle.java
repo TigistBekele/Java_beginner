@@ -10,6 +10,8 @@ public abstract class Vehicle {
 	protected int year;
 	
 	
+	
+	
 	public Vehicle(int id, String brand, int mileAge, String color, int year) {
 		super();
 		this.id = id;
@@ -59,5 +61,7 @@ public abstract class Vehicle {
 	public void fast() {
 		System.out.println("fast fast fast");
 	}
+
+	
 	
 }

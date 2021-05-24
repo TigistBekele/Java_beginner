@@ -18,7 +18,12 @@ public class Trainee extends Person {
 		super(name, age, city);
 //		this.subjectsLearned = subjectsLearned;
 		
+		
+		
 	}
+//	public void speak() {
+//		System.out.println("Hello!!!!");
+//	}
 
 	public List<String> getSubjectslearned() {
 		return subjectslearned;
