@@ -4,28 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garage {
+
+	
 	protected List<Vehicle> garageList;
 	
 	public Garage(List<Vehicle> garageList) {
 	    this.garageList = garageList;
 	  }
-	
+
 	public void addVehcle(Vehicle used) {
 	    this.garageList.add(used);
 	  }
 
-	  public void removeVehcle(Vehicle rav) {
-	    this.garageList.remove(rav);
+	  public void removeVehcle(Vehicle used) {
+	    this.garageList.remove(used);
 	  }
+	
+	
 	
 	  public double calcBill() {
 		    // To get Vehicle types.
 		    double bill = 0.00;
 		    for (int i = 0; i < this.garageList.size(); i++) {
 		      if (this.garageList.get(i) instanceof Car) {
-		        bill = bill + 15.45;
+		        bill = bill + 10.50 ;
 		      } else {
-		        bill = bill + 10;
+		         bill = bill + 2; 
 		      }
 		    }
 		    return bill;

@@ -4,6 +4,9 @@ public class Bird {
 
 //	alt + Shift + S
 
+//	public void speak() {
+//		System.out.println("Hello I can speak!!!!");
+//	}
 //	ATRIBUTES
 	protected String species;
 	protected boolean canfly;
