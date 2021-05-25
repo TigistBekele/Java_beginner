@@ -3,13 +3,12 @@ package com.qa.abstraction;
 public class Bike extends Vehicle {
 
 	private int workyr;
-	private boolean repaired; 
-	
-	
+	private boolean repaired;
 
-	public Bike(int id, String brand, int mileAge, String color, int year,boolean repaired) {
-		super(id, brand, mileAge, color, year);
-		// TODO Auto-generated constructor stub
+	public Bike(String brand, int mileAge, String color, boolean repaired) {
+		super(brand, mileAge, color);
+		this.repaired = repaired;
+
 	}
 
 	public int getWorkyr() {
@@ -21,39 +20,15 @@ public class Bike extends Vehicle {
 	}
 
 	@Override
-	public void left() {
-		System.out.println("I wanna go with left");
-
+	public String toString() {
+		return "Bike [currentid=" + currentid + ", repaired=" + repaired + ",  brand=" + brand + ", mileAge=" + mileAge
+				+ ", color=" + color + "]";
 	}
 
 	@Override
-	public void ride() {
-		System.out.println("ride is fast");
+	public void isDrivingfast() {
+		System.out.println("This is a bike speed");
 
 	}
 
-	@Override
-	public void stop() {
-		System.out.println("this is STOP sign");
-
-	}
-	@Override
-	  public String toString() {
-	    return (
-	      "The Brand of Bike is: " +
-	      this.brand +
-	      "\n" +
-	      "Year of Manufactrer: " +
-	      this.year +
-	      "\n" +
-	      "The Color of Bike is: " +
-	      this.color +
-	      "\n" +
-	      "Is the Bike repaired ? " +
-	      this.repaired +
-	      "\n"
-	    );
-	  }
-	}
-
-
+}
