@@ -1,13 +1,12 @@
 package com.qa.abstraction;
 
 public class Car extends Vehicle {
-	
-	private int wheel;
-	
 
-	public Car(int id, String brand, int mileAge, String color, int year,int wheel) {
-		super(id, brand, mileAge, color, year);
-		
+	private int wheel;
+
+	public Car(String brand, int mileAge, String color) {
+		super(brand, mileAge, color);
+
 	}
 
 	public int getWheel() {
@@ -19,37 +18,14 @@ public class Car extends Vehicle {
 	}
 
 	@Override
-	public void left() {
-		 System.out.println("the car works left"); 
-	}
-	@Override
-	public void ride() {
-	
-		System.out.println("the car works ride"); 
+	public String toString() {
+		return "Car [currentid=" + currentid + ", brand=" + brand + ", mileAge=" + mileAge + ", color=" + color + "]";
 	}
 
 	@Override
-	public void stop() {
-		System.out.println("STOP"); 
+	public void isDrivingfast() {
+		System.out.println("This is a car driving speed");
 
 	}
 
-	@Override
-	  public String toString() {
-	    return (
-	      "The Brand of Car is: " +
-	      this.brand +
-	      "\n" +
-	      "Year of Manufacture: " +
-	      this.year +
-	      "\n" +
-	      "Color Of Car: " +
-	      this.color+
-	      "\n" +
-	      "The mileAge of the Car is: " +
-	      this.mileAge +
-	      "\n"
-	    );
-	  }
-	}
-
+}
